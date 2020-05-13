@@ -71,7 +71,7 @@ class HouseTest < Minitest::Test
     assert house.details
   end
 
-  def test_it
+  def test_it_gives_sq_ft_price
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
