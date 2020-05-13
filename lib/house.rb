@@ -41,4 +41,18 @@ class House
     new_room_array
   end
 
+  def area
+    length_array = []
+    width_array = []
+    counter = 0
+    area_adder = 0
+    @rooms.select do |room|
+      length_array << room.length
+      width_array << room.width
+      area_adder += length_array[counter] * width_array[counter]
+      counter += 1
+    end
+    area_adder
+  end
+
 end
