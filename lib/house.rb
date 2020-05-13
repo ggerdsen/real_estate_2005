@@ -1,8 +1,7 @@
 class House
   attr_reader :price,
-              :address
+              :address,
               :rooms
-
 
   def initialize(price, address)
     @price = price
@@ -25,7 +24,6 @@ class House
     if @price.slice(0) == "$"
       @price.slice!(0)
     end
-
     if @price.to_i > 500000
       @above_market_average = true
     else
@@ -33,5 +31,14 @@ class House
     end
   end
 
+  def rooms_from_category(type)
+    new_room_array = []
+    @rooms.select do |room|
+      if room.category == type
+        new_room_array << room
+      end
+    end
+    new_room_array
+  end
 
 end
