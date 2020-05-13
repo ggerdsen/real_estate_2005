@@ -31,4 +31,5 @@ class HouseTest < Minitest::Test
     assert house.add_room(room_2)
   end
 
+
 end

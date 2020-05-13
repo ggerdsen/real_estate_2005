@@ -18,4 +18,5 @@ class House
     @rooms << room
   end
 
+
 end
