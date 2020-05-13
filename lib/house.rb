@@ -55,4 +55,7 @@ class House
     area_adder
   end
 
+  def details
+    hash = {"price" => @price, "address" => @address}
+  end
 end
