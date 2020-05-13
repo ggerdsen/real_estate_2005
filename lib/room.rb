@@ -6,8 +6,7 @@ class Room
     @category = category
     @length = length.to_i
     @width = width.to_i
-    @is_painted
-
+    @is_painted = false
   end
 
   def area
