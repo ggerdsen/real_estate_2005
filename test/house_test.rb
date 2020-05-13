@@ -27,10 +27,8 @@ class HouseTest < Minitest::Test
     assert_equal [], house.rooms
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
-    house.add_room(room_1)
-    house.add_room(room_2)
-    p house.rooms
-
+    assert house.add_room(room_1)
+    assert house.add_room(room_2)
   end
 
 end
