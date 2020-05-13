@@ -58,4 +58,21 @@ class House
   def details
     hash = {"price" => @price, "address" => @address}
   end
+
+  def price_per_square_foot
+    length_array = []
+    width_array = []
+    counter = 0
+    area_adder = 0
+    @rooms.select do |room|
+      length_array << room.length
+      width_array << room.width
+      area_adder += length_array[counter] * width_array[counter]
+      counter += 1
+    end
+    if @price.slice(0) == "$"
+      @price.slice!(0)
+    end
+    @price.to_f / area_adder
+  end
 end

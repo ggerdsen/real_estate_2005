@@ -80,7 +80,8 @@ class HouseTest < Minitest::Test
     house.add_room(room_4)
     house.add_room(room_1)
     house.add_room(room_3)
-    house.add_room(room_2) 
+    house.add_room(room_2)
+    p house.price_per_square_foot
   end
 
 end
